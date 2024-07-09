@@ -1,0 +1,236 @@
+main{
+    padding: 4rem 8rem;
+    display: flex;
+    gap: 6rem;
+    position: relative;
+}
+.product-images-infos {
+    flex: 1;
+}
+#product-main-image{
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+.thumnails-section{
+    display: flex;
+    gap: 35px;
+    margin-top: 1.7rem;
+}
+.thumnails-section img{
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.thumnails-section img:hover{
+    opacity: 0.6;
+}
+#sneaker-company{
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+h1{
+    font-size: 2.8rem;
+    margin-bottom: 1.8rem;
+}
+p{
+    color: var(--dark-grayish-blue);
+    line-height: 25px;
+    margin-bottom: 1rem;
+}
+.current-price-section{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 0.8rem
+}
+h2{
+    font-size: 1.9rem;
+}
+#promo{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+}
+#old-price{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-weight: 650;
+    margin-bottom: 2rem;
+    display: block;
+}
+.quantity-section{
+    display: flex;
+    align-items: center;
+    background-color: var(--light-grayish-blue);
+    border-radius: 8px;
+    justify-content: space-between;
+}
+.quantity-controls{
+    border: none;
+    padding: 0 1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+#quantity{
+    font-weight: 650;
+    font-size: 1.2rem;
+}
+#add-to-cart-btn{
+    background-color: var(--orange);
+    color: var(--very-dark-blue);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    flex-grow: 1;
+}
+#add-to-cart-btn:hover{
+    background-color: rgba(255, 125, 26, 0.7);
+    cursor: pointer;
+}
+.quantity-add-btn-section{
+    display: flex;
+    gap: 20px;
+}
+#add-to-cart-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+}
+#add-to-cart-btn svg path {
+    fill: var(--very-dark-blue);
+}
+.active{
+    border: 2.8px solid var(--orange);
+    opacity: 0.5;
+}
+
+.lightbox-gallery{
+    position: absolute;
+    width: 100%;
+    min-height: 130vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: -6.2rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.lightbox-content{
+    width: 38%;
+    margin: auto;
+}
+#product-main-image-lightbox{
+    border-radius: 15px;
+}
+.close-light-box-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+#close-lightboxBtn{
+    margin-bottom: 0.5rem;
+}
+#close-lightboxBtn path {
+    fill: var(--white);
+}
+.lightbox-main{
+    position: relative;
+}
+.next-previous-btns{
+    background-color: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previous{
+    position: absolute;
+    top: 47%;
+    left: -1.2rem;
+}
+.previous.mobile{
+    left: 1.2rem;  
+}
+.next{
+    position: absolute;
+    top: 47%;
+    right: -1.2rem;
+}
+.next.mobile{
+    right: 1.2rem;
+}
+svg:focus{
+   outline: none; 
+}
+svg:focus-visible{
+    outline: 2.5px solid var(--black);
+    border-radius: 5px;
+}
+
+.main-product-img-gallery{
+    position: relative;
+}
+@media(max-width: 1180px) and (min-width:850px){
+    main{
+        padding: 4rem 2rem;
+        display: flex;
+        gap: 2rem;
+    }
+    .product-infos{
+        flex: 2;
+    }
+    #add-to-cart-btn{
+        padding: 1rem 0.5rem;
+        gap: 5px;
+    }   
+}
+
+@media(max-width:850px){
+    main{
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    .product-infos{
+        padding: 1.8rem;
+    }
+    .thumnails-section{
+        display: none;
+    }
+    .quantity-add-btn-section{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .price-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #old-price{
+        margin-bottom: 0;
+    }
+    #sneaker-company{
+        margin-top: 1rem;
+    }
+    .lightbox-gallery{
+        display: none;
+    }
+    .quantity-section{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
